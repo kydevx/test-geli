@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------
+Test set: com.example.test_geli.services.ProductServiceTest
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.134 s <<< FAILURE! -- in com.example.test_geli.services.ProductServiceTest
+com.example.test_geli.services.ProductServiceTest.getProductById_Success -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "com.example.test_geli.mappers.ProductMapper.toDto(com.example.test_geli.entity.ProductEntity)" because "this.productMapper" is null
+	at com.example.test_geli.services.ProductService.getProductById(ProductService.java:43)
+	at com.example.test_geli.services.ProductServiceTest.getProductById_Success(ProductServiceTest.java:98)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.example.test_geli.services.ProductServiceTest.getProducts_Success -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "com.example.test_geli.mappers.ProductMapper.toDto(com.example.test_geli.entity.ProductEntity)" because "this.productMapper" is null
+	at com.example.test_geli.services.ProductService.lambda$getProducts$0(ProductService.java:37)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
+	at java.base/java.util.ArrayList$Itr.forEachRemaining(ArrayList.java:1086)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:727)
+	at org.springframework.data.domain.Chunk.getConvertedContent(Chunk.java:131)
+	at org.springframework.data.domain.PageImpl.map(PageImpl.java:86)
+	at com.example.test_geli.services.ProductService.getProducts(ProductService.java:37)
+	at com.example.test_geli.services.ProductServiceTest.getProducts_Success(ProductServiceTest.java:67)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
